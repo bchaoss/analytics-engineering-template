@@ -1,16 +1,11 @@
 {
-  "name": "Node + Python Feature",
+  "name": "Node + dbt Fusion Feature",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20-bullseye",
-  "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.13"
-    }
-  },
+  "features": {},
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-python.python",
-        "innoverio.vscode-dbt-power-user",
+        "dbtLabsInc.dbt",
         "evidence.evidence-vscode",
         "svelte.svelte-vscode"
       ]
@@ -21,7 +16,7 @@
     "bi setup": "echo \"EVIDENCE_SOURCE__token=${MOTHERDUCK_TOKEN}\" > reports/.env"
   },
   "postCreateCommand": {
-    "dbt dependencies": "pip install -r requirements.txt",
+    "dbt dependencies": "curl -fsSL https://public.cdn.getdbt.com/fs/install/install.sh | sh -s -- --update",
     "bi dependencies": "cd reports/ && npm install && npm run sources"
   }
 }

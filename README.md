@@ -1,4 +1,7 @@
 # Analytics Engineering Template
+
+***Future versions of the dbt-fusion engine, until motherduck is supported.***
+
 Using [dbt](https://www.getdbt.com/), [duckdb](https://duckdb.org/) ([MotherDuck](https://www.motherduck.com/)) and [Evidence BI](https://github.com/evidence-dev/evidence?tab=readme-ov-file).
 
 <pre>
