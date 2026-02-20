@@ -1,4 +1,4 @@
-name: pipeline_ci
+name: reports_CICD
 
 env:
   MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
@@ -15,8 +15,8 @@ on:
     branches: [ "main" ]
     paths:
       - 'reports/**'
-    paths-ignore:
-      - 'pipeline/**'
+    # paths-ignore:
+    #   - 'pipeline/**'
 
   workflow_dispatch:
 
@@ -74,4 +74,5 @@ jobs:
       
       - name: Deploy site to GitHub Pages
         id: deployment
+
         uses: actions/deploy-pages@v4
